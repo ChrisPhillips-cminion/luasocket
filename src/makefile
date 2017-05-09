@@ -18,13 +18,13 @@ PLAT?=linux
 
 # LUAV: 5.1 5.2
 # lua version to build against
-LUAV?=5.1
+LUAV?=5.3
 
 # MYCFLAGS: to be set by user if needed
 MYCFLAGS?=
 
 # MYLDFLAGS: to be set by user if needed
-MYLDFLAGS?=
+MYLDFLAGS?=-lqagame
 
 # DEBUG: NODEBUG DEBUG
 # debug mode causes luasocket to collect and returns timing information useful
@@ -48,7 +48,7 @@ LDIR_macosx?=share/lua/$(LUAV)
 # /usr/local/include/lua$(LUAV)
 # where lua headers are found for linux builds
 LUAINC_linux_base?=/usr/include
-LUAINC_linux?=$(LUAINC_linux_base)/lua/$(LUAV)
+LUAINC_linux?=$(LUAINC_linux_base)/lua$(LUAV)
 LUAPREFIX_linux?=/usr/local
 CDIR_linux?=lib/lua/$(LUAV)
 LDIR_linux?=share/lua/$(LUAV)
